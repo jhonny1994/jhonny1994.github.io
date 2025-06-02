@@ -6,55 +6,74 @@ document.addEventListener('DOMContentLoaded', () => {
     const darkThemeIconClass = 'bi-moon-fill';
     const preferredThemeKey = 'preferredTheme';
 
-    // Function to apply the theme and update the icon
     function applyTheme(theme) {
-        if (theme === 'dark') {
-            body.classList.add('dark-theme');
-            if (themeToggleIcon) {
-                themeToggleIcon.classList.remove(lightThemeIconClass);
-                themeToggleIcon.classList.add(darkThemeIconClass);
-            }
-        } else {
-            body.classList.remove('dark-theme');
-            if (themeToggleIcon) {
-                themeToggleIcon.classList.remove(darkThemeIconClass);
-                themeToggleIcon.classList.add(lightThemeIconClass);
-            }
-        }
-    }
-
-    // Function to toggle the theme
-    function toggleTheme() {
-        let currentTheme = body.classList.contains('dark-theme') ? 'dark' : 'light';
-        let newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        
-        applyTheme(newTheme);
-        localStorage.setItem(preferredThemeKey, newTheme);
-    }
-
-    // Initialize theme on page load
-    function initTheme() {
-        let savedTheme = localStorage.getItem(preferredThemeKey);
-        
-        if (savedTheme) {
-            applyTheme(savedTheme);
-        } else {
-            // Optional: Check for OS preference if no theme is saved
-            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                applyTheme('dark');
-                // Optionally save this as the initial preference
-                // localStorage.setItem(preferredThemeKey, 'dark'); 
+        try {
+            if (theme === 'dark') {
+                body.classList.add('dark-theme');
+                if (themeToggleIcon) {
+                    themeToggleIcon.classList.remove(lightThemeIconClass);
+                    themeToggleIcon.classList.add(darkThemeIconClass);
+                }
             } else {
-                applyTheme('light'); // Default to light theme
+                body.classList.remove('dark-theme');
+                if (themeToggleIcon) {
+                    themeToggleIcon.classList.remove(darkThemeIconClass);
+                    themeToggleIcon.classList.add(lightThemeIconClass);
+                }
             }
+        } catch (error) {
+            console.error("Error applying theme:", error);
         }
     }
 
-    // Add event listener to the toggle button
-    if (themeToggleBtn) {
-        themeToggleBtn.addEventListener('click', toggleTheme);
+    function toggleTheme() {
+        try {
+            let currentTheme = body.classList.contains('dark-theme') ? 'dark' : 'light';
+            let newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            applyTheme(newTheme);
+            localStorage.setItem(preferredThemeKey, newTheme);
+        } catch (error) {
+            console.error("Error toggling theme:", error);
+        }
     }
 
-    // Initialize theme
+    function initTheme() {
+        try {
+            let savedTheme = localStorage.getItem(preferredThemeKey);
+            
+            if (savedTheme) {
+                applyTheme(savedTheme);
+            } else {
+                if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    applyTheme('dark');
+                } else {
+                    applyTheme('light');
+                }
+            }
+        } catch (error) {
+            console.error("Error initializing theme:", error);
+        }
+    }
+
+    if (themeToggleBtn) {
+        try {
+            themeToggleBtn.addEventListener('click', toggleTheme);
+        } catch (error) {
+            console.error("Error adding event listener to theme toggle button:", error);
+        }
+    } else {
+        console.warn("Theme toggle button #themeToggleBtn not found.");
+    }
+    
+    if (!themeToggleIcon) {
+        console.warn("Theme toggle icon #themeToggleIcon not found.");
+    }
+    if (!body) {
+        // This should not happen if script is loaded correctly with DOMContentLoaded
+        console.error("Document body not found.");
+        return; 
+    }
+
     initTheme();
 });

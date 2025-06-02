@@ -359,6 +359,11 @@ strong {
   margin-left: 20px;
 }
 
+/* This targets the main ul for nav items */
+.navbar-nav {
+  align-items: center; /* Explicitly set for vertical alignment */
+}
+
 .navbar-nav .nav-link {
   display: inline-block;
   color: var(--section-bg-color);
