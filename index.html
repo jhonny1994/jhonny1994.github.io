@@ -47,8 +47,9 @@
                     <li class="nav-item">
                         <a class="nav-link click-scroll" href="#section_5" data-i18n="navContact">Contact</a>
                     </li>
-                    <!-- Moved Switchers Start Here -->
-                    <li class="nav-item dropdown ms-lg-3">
+                </ul>
+                <ul class="navbar-nav ms-auto"> <!-- Switchers pushed to the far right/end -->
+                    <li class="nav-item dropdown ms-lg-3"> <!-- ms-lg-3 provides some spacing from the edge or previous group -->
                         <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-i18n="navLangSwitcher">
                             Language
                         </a>
@@ -58,12 +59,11 @@
                             <li><a class="dropdown-item" href="#" onclick="window.setAppLanguage('ar'); return false;">العربية</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item ms-lg-2"> <!-- Adjusted margin if needed, ms-lg-2 keeps it slightly separated -->
+                    <li class="nav-item ms-lg-2"> 
                         <button class="nav-link btn btn-link theme-toggle-btn" id="themeToggleBtn" type="button" aria-label="Toggle theme">
                             <i class="bi bi-sun-fill" id="themeToggleIcon"></i>
                         </button>
                     </li>
-                    <!-- Moved Switchers End Here -->
                 </ul>
             </div>
         </div>
