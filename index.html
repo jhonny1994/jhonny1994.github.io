@@ -1,13 +1,13 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="Douadi Mohamed Abderraouf - CarboDex">
-    <title>Douadi Mohamed Abderraouf - Flutter Developer Portfolio</title>
-    <meta name="description" content="Flutter Developer.">
+    <title data-i18n="metaTitle">Douadi Mohamed Abderraouf - Flutter Developer Portfolio</title>
+    <meta name="description" content="Flutter Developer." data-i18n-content="metaDescription">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
@@ -26,26 +26,45 @@
     <nav class="navbar navbar-expand-lg">
         <div class="container">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" data-i18n-aria-label="navbarToggleLabel">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a href="index.html" class="navbar-brand mx-auto mx-lg-0">CarboDex</a>
+            <a href="index.html" class="navbar-brand mx-auto mx-lg-0" data-i18n="navBrand">CarboDex</a>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-lg-5">
                     <li class="nav-item">
-                        <a class="nav-link click-scroll" href="#section_1">Home</a>
+                        <a class="nav-link click-scroll" href="#section_1" data-i18n="navHome">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link click-scroll" href="#section_2">About</a>
+                        <a class="nav-link click-scroll" href="#section_2" data-i18n="navAbout">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link click-scroll" href="#section_3">Services</a>
+                        <a class="nav-link click-scroll" href="#section_3" data-i18n="navServices">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link click-scroll" href="#section_4">Projects</a>
+                        <a class="nav-link click-scroll" href="#section_4" data-i18n="navProjects">Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link click-scroll" href="#section_5">Contact</a>
+                        <a class="nav-link click-scroll" href="#section_5" data-i18n="navContact">Contact</a>
+                    </li>
+                </ul>
+                <!-- Language Switcher Dropdown -->
+                <ul class="navbar-nav ms-auto"> <!-- Use ms-auto to push to the right, or adjust as needed -->
+                    <li class="nav-item dropdown ms-lg-3">
+                        <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-i18n="navLangSwitcher">
+                            Language
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                            <li><a class="dropdown-item" href="#" onclick="window.setAppLanguage('en'); return false;">English</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="window.setAppLanguage('fr'); return false;">Français</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="window.setAppLanguage('ar'); return false;">العربية</a></li>
+                        </ul>
+                    </li>
+                    <!-- Theme Switcher Button -->
+                    <li class="nav-item ms-lg-2">
+                        <button class="nav-link btn btn-link theme-toggle-btn" id="themeToggleBtn" type="button" aria-label="Toggle theme">
+                            <i class="bi bi-sun-fill" id="themeToggleIcon"></i>
+                        </button>
                     </li>
                 </ul>
             </div>
@@ -58,16 +77,16 @@
                     <div class="col-lg-7 col-12">
                         <div class="hero-text">
                             <div class="hero-title-wrap d-flex align-items-center mb-4">
-                                <img src="images/pp.jpeg" class="avatar-image avatar-image-large img-fluid" alt="Douadi Mohamed Abderraouf - Profile Picture">
-                                <h2 class="hero-title ms-4 ps-5 pe-5">Hi, I'm Douadi Mohamed Abderraouf, a Flutter Developer.</h2>
+                                <img src="images/pp.jpeg" class="avatar-image avatar-image-large img-fluid" alt="Douadi Mohamed Abderraouf - Profile Picture" data-i18n-alt="altProfilePicHero">
+                                <h2 class="hero-title ms-4 ps-5 pe-5" data-i18n="heroGreeting">Hi, I'm Douadi Mohamed Abderraouf, a Flutter Developer.</h2>
                             </div>
-                            <p class="mb-4 text-center"><a class="custom-btn btn custom-link hero-contact-btn" href="#section_2">Contact me</a></p>
+                            <p class="mb-4 text-center"><a class="custom-btn btn custom-link hero-contact-btn" href="#section_2" data-i18n="heroContactButton">Contact me</a></p>
                         </div>
                     </div>
                     <div class="col-lg-5 col-12 position-relative">
                         <div class="hero-image-wrap"></div>
                         <img src="https://storage.googleapis.com/cms-storage-bucket/780e0e64d323aad2cdd5.png"
-                            class="hero-image img-fluid" alt="Flutter logo">
+                            class="hero-image img-fluid" alt="Flutter logo" data-i18n-alt="altFlutterLogo">
                     </div>
                 </div>
             </div>
@@ -82,12 +101,12 @@
                 <div class="row">
                     <div class="col-lg-10 col-12 mx-auto">
                         <div class="section-title-wrap d-flex justify-content-center align-items-center mb-5">
-                            <img src="images/pp.jpeg" class="avatar-image img-fluid" alt="My Story - Douadi Mohamed Abderraouf - Avatar">
-                            <h2 class="text-white ms-4 mb-0">My Story</h2>
+                            <img src="images/pp.jpeg" class="avatar-image img-fluid" alt="My Story - Douadi Mohamed Abderraouf - Avatar" data-i18n-alt="altProfilePicAbout">
+                            <h2 class="text-white ms-4 mb-0" data-i18n="aboutSectionTitle">My Story</h2>
                         </div>
                         <div class="about-thumb mb-4">
-                            <h3 class="pt-2 mb-3">a little bit about me</h3>
-                            <p>Passionate about creating efficient, user-centered mobile experiences with Flutter,
+                            <h3 class="pt-2 mb-3" data-i18n="aboutLittleBit">a little bit about me</h3>
+                            <p data-i18n="aboutMyStoryParagraph">Passionate about creating efficient, user-centered mobile experiences with Flutter,
                                 Riverpod, and DDD architecture. I focus on building, high-quality apps with clean code
                                 and automation for reliable performance. With a commitment to best practices and
                                 continuous learning, I’m expanding my portfolio and presence on platforms like GitHub
@@ -97,25 +116,24 @@
                         </div>
                         <div class="profile-thumb">
                             <div class="profile-title">
-                                <h4 class="mb-0">Information</h4>
+                                <h4 class="mb-0" data-i18n="infoTitle">Information</h4>
                             </div>
                             <div class="profile-body">
                                 <p>
-                                    <span class="profile-small-title">Name</span>
-                                    <span>Douadi mohamed abderraouf</span>
+                                    <span class="profile-small-title" data-i18n="infoNameLabel">Name</span>
+                                    <span data-i18n="infoNameValue">Douadi mohamed abderraouf</span>
                                 </p>
                                 <p>
-                                    <span class="profile-small-title">Country</span>
-                                    <span>Algeria</span>
+                                    <span class="profile-small-title" data-i18n="infoCountryLabel">Country</span>
+                                    <span data-i18n="infoCountryValue">Algeria</span>
                                 </p>
                                 <p>
-                                    <span class="profile-small-title">Birthday</span>
-                                    <span>Dec 12, 1994</span>
+                                    <span class="profile-small-title" data-i18n="infoBirthdayLabel">Birthday</span>
+                                    <span data-i18n="infoBirthdayValue">Dec 12, 1994</span>
                                 </p>
                                 <p>
-                                    <span class="profile-small-title">Email</span>
-                                    <span><a
-                                            href="mailto:douadi.med.abderraouf@gmail.com">douadi.med.abderraouf@gmail.com</a></span>
+                                    <span class="profile-small-title" data-i18n="infoEmailLabel">Email</span>
+                                    <span><a href="mailto:douadi.med.abderraouf@gmail.com" data-i18n="infoEmailValue">douadi.med.abderraouf@gmail.com</a></span>
                                 </p>
                             </div>
                         </div>
@@ -129,16 +147,16 @@
                     <div class="col-lg-10 col-12 mx-auto">
                         <div class="section-title-wrap d-flex justify-content-center align-items-center mb-5">
                             <img src="images/handshake-man-woman-after-signing-business-contract-closeup.jpg"
-                                class="avatar-image img-fluid" alt="Handshake signifying service agreement">
-                            <h2 class="text-white ms-4 mb-0">Services</h2>
+                                class="avatar-image img-fluid" alt="Handshake signifying service agreement" data-i18n-alt="altHandshake">
+                            <h2 class="text-white ms-4 mb-0" data-i18n="servicesSectionTitle">Services</h2>
                         </div>
                         <div class="row pt-lg-5">
                             <div class="col-lg-6 col-12">
                                 <div class="services-thumb">
                                     <div class="d-flex flex-wrap align-items-center border-bottom mb-4 pb-3">
-                                        <h3 class="mb-0">Mobile apps</h3>
+                                        <h3 class="mb-0" data-i18n="serviceMobileTitle">Mobile apps</h3>
                                     </div>
-                                    <p>Expertly crafting intuitive and engaging mobile applications for iOS and Android using Flutter. I focus on user-centric design and robust performance to bring your ideas to life on any device.</p>
+                                    <p data-i18n="serviceMobileDescription">Expertly crafting intuitive and engaging mobile applications for iOS and Android using Flutter. I focus on user-centric design and robust performance to bring your ideas to life on any device.</p>
                                     <div class="services-icon-wrap d-flex justify-content-center align-items-center">
                                         <i class="services-icon bi-phone" aria-hidden="true"></i>
                                     </div>
@@ -147,9 +165,9 @@
                             <div class="col-lg-6 col-12">
                                 <div class="services-thumb services-thumb-up">
                                     <div class="d-flex flex-wrap align-items-center border-bottom mb-4 pb-3">
-                                        <h3 class="mb-0">Desktop apps</h3>
+                                        <h3 class="mb-0" data-i18n="serviceDesktopTitle">Desktop apps</h3>
                                     </div>
-                                    <p>Building powerful and efficient cross-platform desktop applications with Flutter. From utility tools to more complex software, I deliver solutions that are both user-friendly and technically sound.</p>
+                                    <p data-i18n="serviceDesktopDescription">Building powerful and efficient cross-platform desktop applications with Flutter. From utility tools to more complex software, I deliver solutions that are both user-friendly and technically sound.</p>
                                     <div class="services-icon-wrap d-flex justify-content-center align-items-center">
                                         <i class="services-icon bi-windows" aria-hidden="true"></i>
                                     </div>
@@ -165,50 +183,50 @@
                     <div class="col-lg-10 col-12 mx-auto">
                         <div class="section-title-wrap d-flex justify-content-center align-items-center mb-5">
                             <img src="images/white-desk-work-study-aesthetics.jpg" class="avatar-image img-fluid"
-                               alt="Desk with items representing projects">
-                            <h2 class="text-white ms-4 mb-0">Projects</h2>
+                               alt="Desk with items representing projects" data-i18n-alt="altProjectsDesk">
+                            <h2 class="text-white ms-4 mb-0" data-i18n="projectsSectionTitle">Projects</h2>
                         </div>
                     </div>
                     <div class="clearfix"></div>
                     <div class="col-lg-4 col-md-6 col-12">
                         <div class="projects-thumb">
                             <div class="projects-info">
-                                <small class="projects-tag">Mobile apps</small>
-                                <h3 class="projects-title">Trivico</h3>
-                                <p class="projects-description">A fun and engaging quiz application that tests your knowledge on various topics. Features a clean UI and smooth user experience.</p>
+                                <small class="projects-tag" data-i18n="projectTagMobile">Mobile apps</small>
+                                <h3 class="projects-title" data-i18n="projectTrivicoTitle">Trivico</h3>
+                                <p class="projects-description" data-i18n="projectTrivicoDescription">A fun and engaging quiz application that tests your knowledge on various topics. Features a clean UI and smooth user experience.</p>
                             </div>
                             <a href="https://raw.githubusercontent.com/jhonny1994/trivico/main/assets/screenshots/light_android_phone_samsung-galaxy-s20_1719487931780.png"
                                 class="popup-image">
                                 <img src="https://raw.githubusercontent.com/jhonny1994/trivico/main/assets/screenshots/light_android_phone_samsung-galaxy-s20_1719487931780.png"
-                                    class="projects-image img-fluid" alt="Trivico project screenshot">
+                                    class="projects-image img-fluid" alt="Trivico project screenshot" data-i18n-alt="altTrivicoScreenshot">
                             </a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-12">
                         <div class="projects-thumb">
                             <div class="projects-info">
-                                <small class="projects-tag">Mobile apps</small>
-                                <h3 class="projects-title">Translazy</h3>
-                                <p class="projects-description">A handy translation app that helps you quickly translate text and voice. Supports multiple languages for seamless communication.</p>
+                                <small class="projects-tag" data-i18n="projectTagMobile">Mobile apps</small>
+                                <h3 class="projects-title" data-i18n="projectTranslazyTitle">Translazy</h3>
+                                <p class="projects-description" data-i18n="projectTranslazyDescription">A handy translation app that helps you quickly translate text and voice. Supports multiple languages for seamless communication.</p>
                             </div>
                             <a href="https://raw.githubusercontent.com/jhonny1994/translazy/refs/heads/main/.store/android_phone_samsung-galaxy-s20_1734335225155.png"
                                 class="popup-image">
                                 <img src="https://raw.githubusercontent.com/jhonny1994/translazy/refs/heads/main/.store/android_phone_samsung-galaxy-s20_1734335225155.png"
-                                    class="projects-image img-fluid" alt="Translazy project screenshot">
+                                    class="projects-image img-fluid" alt="Translazy project screenshot" data-i18n-alt="altTranslazyScreenshot">
                             </a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-12">
                         <div class="projects-thumb">
                             <div class="projects-info">
-                                <small class="projects-tag">Mobile apps</small>
-                                <h3 class="projects-title">Quotez</h3>
-                                <p class="projects-description">A curated collection of inspiring quotes. Allows users to browse, save, and share their favorite quotes with a beautiful interface.</p>
+                                <small class="projects-tag" data-i18n="projectTagMobile">Mobile apps</small>
+                                <h3 class="projects-title" data-i18n="projectQuotezTitle">Quotez</h3>
+                                <p class="projects-description" data-i18n="projectQuotezDescription">A curated collection of inspiring quotes. Allows users to browse, save, and share their favorite quotes with a beautiful interface.</p>
                             </div>
                             <a href="https://raw.githubusercontent.com/jhonny1994/quotez/main/screenshots/light_android_phone_samsung-galaxy-s20_1720699564388.png"
                                 class="popup-image">
                                 <img src="https://raw.githubusercontent.com/jhonny1994/quotez/main/screenshots/light_android_phone_samsung-galaxy-s20_1720699564388.png"
-                                    class="projects-image img-fluid" alt="Quotez project screenshot">
+                                    class="projects-image img-fluid" alt="Quotez project screenshot" data-i18n-alt="altQuotezScreenshot">
                             </a>
                         </div>
                     </div>
@@ -221,21 +239,21 @@
                     <div class="col-lg-10 col-12 mx-auto">
                         <div class="section-title-wrap d-flex justify-content-center align-items-center mb-5">
                             <img src="images/aerial-view-man-using-computer-laptop-wooden-table.jpg"
-                                class="avatar-image img-fluid" alt="Man at table using laptop, contact section background">
-                            <h2 class="text-white ms-4 mb-0">Say Hi</h2>
+                                class="avatar-image img-fluid" alt="Man at table using laptop, contact section background" data-i18n-alt="altContactManLaptop">
+                            <h2 class="text-white ms-4 mb-0" data-i18n="contactSectionTitle">Say Hi</h2>
                         </div>
                     </div>
                     <div class="clearfix"></div>
                     <div class="col-lg-6 col-12 mt-5 mt-lg-0">
                         <div class="contact-info contact-info-border-start d-flex flex-column">
-                            <strong class="site-footer-title d-block mb-3">Services</strong>
+                            <strong class="site-footer-title d-block mb-3" data-i18n="contactInfoServicesTitle">Services</strong>
                             <ul class="footer-menu">
-                                <li class="footer-menu-item"><a href="#" class="footer-menu-link">Mobile apps</a></li>
-                                <li class="footer-menu-item"><a href="#" class="footer-menu-link">Desktop apps</a></li>
-                                <li class="footer-menu-item"><a href="#" class="footer-menu-link">Websites</a></li>
-                                <li class="footer-menu-item"><a href="#" class="footer-menu-link">Ecommerce</a></li>
+                                <li class="footer-menu-item"><a href="#" class="footer-menu-link" data-i18n="contactInfoServiceMobile">Mobile apps</a></li>
+                                <li class="footer-menu-item"><a href="#" class="footer-menu-link" data-i18n="contactInfoServiceDesktop">Desktop apps</a></li>
+                                <li class="footer-menu-item"><a href="#" class="footer-menu-link" data-i18n="contactInfoServiceWebsites">Websites</a></li>
+                                <li class="footer-menu-item"><a href="#" class="footer-menu-link" data-i18n="contactInfoServiceEcommerce">Ecommerce</a></li>
                             </ul>
-                            <strong class="site-footer-title d-block mt-4 mb-3">Stay connected</strong>
+                            <strong class="site-footer-title d-block mt-4 mb-3" data-i18n="contactInfoStayConnectedTitle">Stay connected</strong>
                             <ul class="social-icon">
                                 <li class="social-icon-item"><a href="https://x.com/d_m_abderraouf"
                                         class="social-icon-link bi-twitter" aria-label="My Twitter profile"></a></li>
@@ -244,8 +262,8 @@
                                 <li class="social-icon-item"><a href="https://www.linkedin.com/in/douadi-med-abderraouf"
                                         class="social-icon-link bi-linkedin" aria-label="My LinkedIn profile"></a></li>
                             </ul>
-                            <strong class="site-footer-title d-block mt-4 mb-3">Start a project</strong>
-                            <p class="mb-0">I’m available for projects</p>
+                            <strong class="site-footer-title d-block mt-4 mb-3" data-i18n="contactInfoStartProjectTitle">Start a project</strong>
+                            <p class="mb-0" data-i18n="contactInfoAvailable">I’m available for projects</p>
                         </div>
                     </div>
                     <div class="col-lg-6 col-12 mt-5 mt-lg-0">
@@ -256,27 +274,27 @@
                                     <div class="form-floating">
                                         <input type="text" name="name" id="name" class="form-control" placeholder="Name"
                                             required pattern="[A-Za-z\s]+"
-                                            title="Please enter a valid name (letters only)">
-                                        <label for="name">Name</label>
+                                            title="Please enter a valid name (letters only)" data-i18n-title="formValidationName">
+                                        <label for="name" data-i18n="formNameLabel">Name</label>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <div class="form-floating">
                                         <input type="email" name="email" id="email" class="form-control"
-                                            placeholder="Email" required title="Please enter a valid email address">
-                                        <label for="email">Email</label>
+                                            placeholder="Email" required title="Please enter a valid email address" data-i18n-title="formValidationEmail">
+                                        <label for="email" data-i18n="formEmailLabel">Email</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
                                         <textarea name="message" id="message" class="form-control" placeholder="Message"
                                             required minlength="10"
-                                            title="Message must be at least 10 characters long"></textarea>
-                                        <label for="message">Message</label>
+                                            title="Message must be at least 10 characters long" data-i18n-title="formValidationMessage"></textarea>
+                                        <label for="message" data-i18n="formMessageLabel">Message</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <button type="submit" class="custom-btn w-100 mt-3">Send Message</button>
+                                    <button type="submit" class="custom-btn w-100 mt-3" data-i18n="formSendButton">Send Message</button>
                                 </div>
                             </div>
                         </form>
@@ -292,6 +310,11 @@
     <script src="js/click-scroll.js"></script>
     <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/magnific-popup-options.js"></script>
+    
+    <!-- Custom i18n and Theming Scripts -->
+    <script src="js/i18n.js"></script>
+    <script src="js/theming.js"></script>
+    
     <script src="js/custom.js"></script>
 </body>
 
