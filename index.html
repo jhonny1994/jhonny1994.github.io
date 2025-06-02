@@ -10,7 +10,7 @@
     <meta name="description" content="Flutter Developer." data-i18n-content="metaDescription">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-icons.css" rel="stylesheet">
     <link href="css/magnific-popup.css" rel="stylesheet">
@@ -47,9 +47,7 @@
                     <li class="nav-item">
                         <a class="nav-link click-scroll" href="#section_5" data-i18n="navContact">Contact</a>
                     </li>
-                </ul>
-                <!-- Language Switcher Dropdown -->
-                <ul class="navbar-nav ms-auto"> <!-- Use ms-auto to push to the right, or adjust as needed -->
+                    <!-- Moved Switchers Start Here -->
                     <li class="nav-item dropdown ms-lg-3">
                         <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-i18n="navLangSwitcher">
                             Language
@@ -60,12 +58,12 @@
                             <li><a class="dropdown-item" href="#" onclick="window.setAppLanguage('ar'); return false;">العربية</a></li>
                         </ul>
                     </li>
-                    <!-- Theme Switcher Button -->
-                    <li class="nav-item ms-lg-2">
+                    <li class="nav-item ms-lg-2"> <!-- Adjusted margin if needed, ms-lg-2 keeps it slightly separated -->
                         <button class="nav-link btn btn-link theme-toggle-btn" id="themeToggleBtn" type="button" aria-label="Toggle theme">
                             <i class="bi bi-sun-fill" id="themeToggleIcon"></i>
                         </button>
                     </li>
+                    <!-- Moved Switchers End Here -->
                 </ul>
             </div>
         </div>
