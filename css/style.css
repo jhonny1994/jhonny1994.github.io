@@ -671,6 +671,11 @@ strong {
   font-size: 90px;
   position: relative;
   bottom: 15px;
+  transition: color 0.5s ease; /* Added transition for color */
+}
+
+.services-thumb:hover .services-icon {
+  color: var(--white-color); /* Explicitly set icon color on hover */
 }
 
 .services-thumb:hover .services-price-wrap {
@@ -723,8 +728,13 @@ strong {
   transition: all ease 0.5s;
 }
 
+.services-thumb p {
+  line-height: 1.6; /* Added for better readability of longer descriptions */
+}
+
 .projects-thumb:hover {
   border-color: var(--secondary-color);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1); /* Added box-shadow on hover */
 }
 
 .projects-thumb:hover .projects-image,
@@ -760,6 +770,14 @@ strong {
   color: var(--secondary-color);
   text-transform: uppercase;
   margin-bottom: 5px;
+}
+
+.projects-description {
+  font-size: 14px;
+  color: var(--p-color);
+  line-height: 1.5;
+  margin-top: 10px;
+  min-height: 60px; /* Ensures consistent info box height */
 }
 
 
@@ -963,7 +981,7 @@ strong {
   color: var(--dark-color);
   display: inline-block;
   vertical-align: top;
-  margin: 2px 2px 5px 2px;
+  margin: 5px; /* Adjusted margin for uniform spacing */
   width: 40px;
   height: 40px;
   line-height: 40px;
@@ -1086,6 +1104,10 @@ strong {
     margin-bottom: 120px;
   }
 
+  .hero-title {
+    font-size: 42px; /* Adjusted for medium screens */
+  }
+
   .about-thumb {
     padding-right: 0;
     padding-left: 0;
@@ -1180,5 +1202,9 @@ strong {
 
   .hero-image {
     min-width: inherit;
+  }
+
+  .hero-title {
+    font-size: 32px; /* Adjusted for small screens */
   }
 }
